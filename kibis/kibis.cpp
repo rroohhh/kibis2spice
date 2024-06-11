@@ -1215,6 +1215,9 @@ bool KIBIS_PIN::writeSpiceDriver( std::string* aDest, std::string aName, KIBIS_M
             getKuKdTwoWaveforms( aModel, wfPairs.at( 0 ), wfPairs.at( 1 ), aParam );
         }
 
+        result += "xDie DIE0 GND " + dieModelName(aModel, aParam) + "\n";
+
+        /*
         result += "Vku KU GND pwl ( ";
 
         for( size_t i = 0; i < m_t.size(); i++ )
@@ -1241,6 +1244,7 @@ bool KIBIS_PIN::writeSpiceDriver( std::string* aDest, std::string aName, KIBIS_M
         result += ") \n";
 
         result += aModel.SpiceDie( aParam, 0 );
+        */
 
         result += "\n.ENDS DRIVER\n\n";
 

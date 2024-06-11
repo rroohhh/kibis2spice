@@ -38,15 +38,16 @@
 #define IBIS_MAX_VERSION 7.0      // Up to v7.0, IBIS is fully backward compatible
 #define IBIS_MAX_LINE_LENGTH 2048 // official limit is 1024
 
-#include <wx/string.h>
+// #include <wx/string.h>
 #include <reporter.h>
-#include "widgets/wx_html_report_panel.h"
+// #include "widgets/wx_html_report_panel.h"
 //#include "common.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <math.h>
 #include <cstring>
+#include <memory>
 
 
 class IBIS_ANY

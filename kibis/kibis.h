@@ -298,7 +298,7 @@ public:
 
 
     /** @brief Copy a waveform, and substract the first value to all samples
-     *
+     B*
      *
      * @param aIn Input waveform
      * @return Output waveform
@@ -403,7 +403,7 @@ public:
      *
      * @param aSimul The simulation to run, multiline spice directives
      */
-    void     getKuKdFromFile( std::string* aSimul );
+    virtual void     getKuKdFromFile( std::string* aSimul );
 
     KIBIS_PIN* m_complementaryPin = nullptr;
 
