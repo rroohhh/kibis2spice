@@ -55,7 +55,7 @@ public:
         if(kv != CACHED_KIBIS_PIN::CACHE.end()) {
             auto data = kv->second;
             m_Kd      = data.kd;
-            m_Ku      = data.kd;
+            m_Ku      = data.ku;
             m_t       = data.t;
         } else {
             KIBIS_PIN::getKuKdFromFile(aSimul);
@@ -314,7 +314,6 @@ int main(int argc, char ** argv) {
                             dieModelNameToModel[thisDieModelName] = dieModel;
                         }
                     } else {
-                        std::string dest;
                         pin.writeSpiceDevice(&dest, pinModelName(pin.m_pinNumber, corner, model->m_name), *model,
                                              kparams);
                     }
